@@ -1,5 +1,3 @@
-import pizzaData from "./pizzaData";
-
 const cardStyle = {
     display: "flex",
     // boxShadow: " rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
@@ -16,7 +14,7 @@ const imgStyle = {
 const detailsStyle = {
     display: "flex",
     flexDirection: "column",
-    gap: "1rem",
+    gap: "0.5rem",
     justifyContent: "center",
 };
 
@@ -29,23 +27,12 @@ function Pizza(props) {
     return (
         <div style={cardStyle}>
             <div>
-                {/* <img
-                    style={imgStyle}
-                    src="../pizzas/focaccia.jpg"
-                    alt="pizza01"
-                /> */}
-                <img
-                    style={imgStyle}
-                    src="../pizzas/focaccia.jpg"
-                    alt="pizza01"
-                />
+                <img style={imgStyle} src={props.img} />
             </div>
             <div style={detailsStyle}>
-                <p>Fucaccia</p>
-                <p style={PizzaDetails}>
-                    Bread With italian olive oil and rosemary
-                </p>
-                <p>6 </p>
+                <p>{props.name}</p>
+                <p style={PizzaDetails}>{props.ingredients}</p>
+                <p>{props.prices}</p>
             </div>
         </div>
     );
