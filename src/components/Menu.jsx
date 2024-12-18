@@ -19,7 +19,7 @@ const ourMenu = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    marginBlock: "2.5rem",
+    marginBlock: "1.7rem",
     letterSpacing: "0.2rem",
 };
 
@@ -28,7 +28,7 @@ const menuContent = {
     textAlign: "center",
     margin: "0 auto",
     lineHeight: "1.6rem",
-    marginBottom: "2rem",
+    marginBottom: "1rem",
 };
 
 function Menu() {

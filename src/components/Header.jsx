@@ -1,7 +1,7 @@
 const HeadingDiv = {
     display: "flex",
     justifyContent: "center",
-    paddingTop: "2rem ",
+    paddingTop: "1.8rem ",
 };
 
 const headstyle = {
