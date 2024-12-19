@@ -2,7 +2,7 @@ const footerStyle = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    margin: "2rem 0",
+    padding: "2rem 0",
     fontFamily: "Times New Roman",
 };
 

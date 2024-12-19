@@ -23,16 +23,21 @@ const PizzaDetails = {
     letterSpacing: "0.1rem",
 };
 
-function Pizza(props) {
+function Pizza(prop) {
+    const { name, ingredients, price, photoName, soldOut } = prop.pizzaData;
     return (
-        <div style={cardStyle}>
+        <div
+            style={
+                soldOut ? { ...cardStyle, filter: "grayscale(1)" } : cardStyle
+            }
+        >
             <div>
-                <img style={imgStyle} src={props.img} />
+                <img style={imgStyle} src={`./${photoName}`} alt={`${name}`} />
             </div>
             <div style={detailsStyle}>
-                <p>{props.name}</p>
-                <p style={PizzaDetails}>{props.ingredients}</p>
-                <p>{props.prices}</p>
+                <p>{`${name}`}</p>
+                <p style={PizzaDetails}>{`${ingredients}`}</p>
+                <p>{soldOut ? "SOLDOUT" : `$ ${price}`}</p>
             </div>
         </div>
     );

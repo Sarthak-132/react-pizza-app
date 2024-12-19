@@ -1,4 +1,5 @@
 import Pizza from "./Pizza";
+import data from "../data/data.js";
 
 const menuStyle = {
     display: "grid",
@@ -19,7 +20,7 @@ const ourMenu = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    marginBlock: "1.7rem",
+    paddingBlock: "0.8rem",
     letterSpacing: "0.2rem",
 };
 
@@ -44,7 +45,11 @@ function Menu() {
                 All from our stone oven, All our organic , all dellicious.
             </p>
             <div style={menuStyle}>
-                <Pizza
+                {data.map(function (pizzaData) {
+                    return <Pizza pizzaData={pizzaData} key={pizzaData.name} />;
+                })}
+
+                {/* <Pizza
                     name="Focaccia"
                     img="pizzas/focaccia.jpg"
                     prices={6}
@@ -79,7 +84,7 @@ function Menu() {
                     img="pizzas/prosciutto.jpg"
                     prices={18}
                     ingredients="Tomato, mozarella, ham, aragula, and burrata cheese"
-                />
+                /> */}
             </div>
         </div>
     );
